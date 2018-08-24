@@ -1,6 +1,7 @@
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1080
 TARGET_SCREEN_WIDTH := 1920
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # Inherit 64-bit configs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -8,14 +9,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lenovo/x3/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := aosip_x3
+PRODUCT_NAME := lineage_x3
 BOARD_VENDOR := lenovo
 TARGET_VENDOR := lenovo
 PRODUCT_DEVICE := x3
