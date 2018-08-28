@@ -29,9 +29,6 @@ include $(LOCAL_PATH)/product/*.mk
 
 $(call inherit-product-if-exists, vendor/adds/copyfiles.mk)
 
-# setup base hwui configs
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
-
 $(call inherit-product,build/target/product/verity.mk)
 
 # Call the proprietary setup
